@@ -1,0 +1,126 @@
+.navbar {
+  background-color: transparent !important;
+  align-items: center;
+  .logo {
+    width: 180px;
+  }
+  .search-form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-floating {
+    width: 85%;
+  }
+  form {
+    position: relative;
+  }
+  .search-btn {
+    font-size: 23px;
+    position: absolute;
+    right: 77px;
+    bottom: 15px;
+    cursor: pointer;
+  }
+  .form-control {
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background-color: $light_color;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    justify-content: end;
+  }
+  .icon {
+    margin-left: 15px;
+    background-color: $light_color;
+    color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  .nav-link {
+    font-weight: 600;
+    margin-right: 19px;
+    font-size: 16px;
+    color: #000000b3;
+  }
+  .d-block-mobile {
+    display: none;
+  }
+  .error {
+    border-color: red;
+  }
+  .true {
+    border-color: transparent;
+  }
+  @media (max-width: 1300px) {
+    .form-floating {
+      width: 64%;
+      margin-left: -66px;
+    }
+
+    .search-btn {
+      right: 144px;
+    }
+
+    .nav-link {
+      margin-right: 5px;
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 992px) {
+    .logo {
+      width: 150px;
+    }
+    .d-block-mobile {
+      display: block;
+    }
+    .form-floating {
+      width: 100%;
+      margin-left: 0;
+      font-size: 13px;
+    }
+    .search-form {
+      width: 120%;
+    }
+    .search-btn {
+      right: 13px;
+      font-size: 17px;
+      bottom: 17px;
+      color: #606060;
+    }
+  }
+}
+.TopNav {
+  border-bottom: 1px solid #eee;
+}
+.BtmNav {
+  padding: 20px 0;
+}
+.TopNav {
+  padding: 11px 0;
+}
+
+@media (max-width: 1300px) {
+  .navbar-expand-lg {
+    .navbar-collapse {
+      flex-wrap: wrap;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .BtmNav {
+    padding: 11px 0;
+  }
+  .TopNav {
+    justify-content: space-between;
+    .search-form,
+    .d-none-mobile {
+      display: none;
+    }
+  }
+}

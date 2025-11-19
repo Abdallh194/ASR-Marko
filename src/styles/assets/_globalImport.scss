@@ -1,0 +1,17 @@
+//bootstrap import
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+//vars
+$light_color: #f8f8f8;
+$light-blue: #e6f3fa;
+$light-green: #eef5e5;
+$light-red: #f9ebe7;
+$main-color: #fcb546;
+$main-font: "Montserrat";
+$header-font: "Roboto";
+body,
+html {
+  font-family: $main-font !important;
+}

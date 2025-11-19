@@ -1,0 +1,11 @@
+.center-ver-ali {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 85%;
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+}

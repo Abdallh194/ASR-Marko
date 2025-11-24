@@ -1,5 +1,10 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body,
+html {
+  font-family: "Montserrat" !important;
+}
+
 .center-ver-ali {
   display: flex;
   align-items: center;
@@ -15,9 +20,61 @@
   }
 }
 
-body,
-html {
-  font-family: "Montserrat" !important;
+.SectionHr .title {
+  position: relative;
+  padding-left: 35px;
+  margin-top: 70px;
+  font-size: 19px;
+  color: #fcb546;
+  font-weight: 600;
+}
+.SectionHr .title::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 73px;
+  left: 0;
+  top: -22px;
+  border-radius: 6px;
+  background-color: #fcb546;
+}
+.SectionHr .title-desc {
+  margin-top: 37px;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Roboto";
+}
+@media (max-width: 992px) {
+  .SectionHr .title-desc {
+    font-size: 22px;
+  }
+}
+
+.loader {
+  display: block;
+  margin: 40px auto;
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: white;
+  font-size: 19px;
+}
+.copy a {
+  text-decoration: none;
+  color: #fcb546;
+  font-weight: bolder;
+}
+@media (max-width: 767px) {
+  .copy {
+    display: block;
+    font-size: 16px;
+  }
+  .copy .name {
+    margin-bottom: 8px;
+  }
 }
 
 .navbar {
@@ -309,5 +366,368 @@ html {
 @media (max-width: 585px) {
   .Homepage {
     height: 1650px;
+  }
+}
+
+.Categories {
+  margin-top: 50px;
+}
+.Categories .categories-card {
+  width: calc(20% - 20px);
+  margin: 10px auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(238, 238, 238, 0.231372549);
+  box-shadow: 0px 0px 12px 3px rgba(238, 238, 238, 0.33);
+  color: black;
+  transition: 0.3s;
+}
+.Categories .categories-card:hover {
+  background-color: #fcb546;
+}
+.Categories a {
+  text-decoration: none;
+}
+.Categories .icon {
+  font-size: 35px;
+}
+.Categories .title {
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 10px;
+}
+@media (max-width: 992px) {
+  .Categories .categories-card {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+@media (max-width: 767px) {
+  .Categories {
+    margin-top: 0;
+  }
+  .Categories .categories-card {
+    padding: 16px 0;
+    width: calc(33.3333333333% - 6px);
+    margin: 3px auto;
+    box-shadow: none;
+    border-color: rgba(238, 238, 238, 0.9098039216);
+  }
+  .Categories .icon {
+    font-size: 27px;
+  }
+  .Categories .title {
+    font-size: 12px;
+  }
+}
+
+.ExploreCategories {
+  background-color: black;
+  color: white;
+  padding: 10px 71px;
+  margin-top: 90px;
+}
+.ExploreCategories .ExploreCategories-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ExploreCategories .ExploreCategories-info {
+  color: #fcb546;
+  font-weight: 600;
+}
+.ExploreCategories .ExploreCategories-head {
+  font-size: 69px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 19px;
+}
+.ExploreCategories .item {
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin: 30px 26px 25px 0;
+}
+.ExploreCategories .item .num {
+  font-family: system-ui;
+  font-weight: 700;
+  font-size: 18px;
+}
+.ExploreCategories .buy {
+  background-color: #fcb546;
+  color: white;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  padding: 14px;
+  font-weight: 600;
+  margin-top: 25px;
+}
+@media (max-width: 1400px) {
+  .ExploreCategories .ExploreCategories-head {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1200px) {
+  .ExploreCategories .ExploreCategories-head {
+    font-size: 38px;
+  }
+  .ExploreCategories .counter {
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .ExploreCategories .item {
+    margin: 0;
+  }
+}
+@media (max-width: 992px) {
+  .ExploreCategories {
+    padding: 35px;
+  }
+  .ExploreCategories .ExploreCategories-head {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .ExploreCategories .item {
+    width: 65px;
+    height: 65px;
+    font-size: 12px;
+  }
+  .ExploreCategories .buy {
+    width: 160px;
+    padding: 10px;
+  }
+  .ExploreCategories .img-fluid {
+    margin-top: 20px;
+  }
+}
+
+.DiscountSec {
+  margin-top: 40px;
+}
+.DiscountSec .row {
+  justify-content: space-between;
+}
+.DiscountSec .discount-card {
+  width: calc(50% - 15px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+}
+.DiscountSec .red-card {
+  background-color: #f9ebe7;
+}
+.DiscountSec .blue-card {
+  background-color: #e6f3fa;
+}
+.DiscountSec .discount {
+  color: #fcb546;
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+.DiscountSec .title {
+  font-size: 29px;
+  font-weight: 700;
+  padding: 8px 0;
+}
+.DiscountSec .info {
+  color: rgba(0, 0, 0, 0.52);
+  font-weight: 500;
+}
+.DiscountSec .shop-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 7px 17px;
+  border-radius: 5px;
+}
+.DiscountSec .content {
+  width: 60%;
+}
+.DiscountSec .img-fluid {
+  width: 40%;
+}
+@media (max-width: 992px) {
+  .DiscountSec .discount-card {
+    width: 92%;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 585px) {
+  .DiscountSec .discount-card,
+  .DiscountSec .img-fluid {
+    display: block;
+  }
+  .DiscountSec .content,
+  .DiscountSec .img-fluid {
+    width: 100%;
+  }
+  .DiscountSec .img-fluid {
+    max-width: 86%;
+    margin: 20px auto 0 auto;
+  }
+}
+
+.Services {
+  background: url("/home-bg.png");
+  padding: 40px 0;
+  margin-top: 20px;
+  position: relative;
+}
+.Services .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(202, 228, 170, 0.2);
+  z-index: -1;
+}
+.Services .img-fluid {
+  max-width: 71%;
+  display: block;
+  margin: auto;
+}
+.Services .header {
+  margin-top: 25px;
+  color: #fcb546;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 700;
+}
+.Services .desc {
+  color: #5d5d5d;
+}
+.Services .services-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.Services .icon {
+  color: #fcb546;
+  color: #fcb546;
+  border: 2px solid;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: 15px auto;
+  font-size: 33px;
+}
+.Services .card-title {
+  margin-bottom: 10px;
+  font-family: "Roboto";
+  font-size: 21px;
+  font-weight: 700;
+}
+.Services .services-card {
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .Services {
+    padding: 0;
+  }
+  .Services .img-fluid {
+    max-width: 92%;
+    margin: 30px auto;
+  }
+  .Services .card-title {
+    margin-bottom: 2px;
+  }
+}
+
+.ASRApp {
+  margin-top: 40px;
+}
+.ASRApp .row {
+  position: relative;
+  z-index: 3;
+}
+.ASRApp .row::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 75%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  border-radius: 40px;
+  background-color: #e6f3fa;
+}
+.ASRApp .img-card {
+  display: flex;
+  justify-content: end;
+}
+.ASRApp .text-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ASRApp .text-card .img-fluid {
+  margin-right: 20px;
+}
+.ASRApp .header {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Roboto";
+}
+.ASRApp .desc {
+  font-size: 19px;
+  width: 89%;
+  color: #6d6d6d;
+  padding: 20px 0;
+}
+@media (max-width: 1400px) {
+  .ASRApp .header {
+    font-size: 22px;
+  }
+  .ASRApp .desc {
+    font-size: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .ASRApp .img-card {
+    justify-content: center;
+  }
+  .ASRApp .row::before {
+    height: 109%;
+  }
+  .ASRApp .text-card {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 585px) {
+  .ASRApp {
+    width: 90%;
+    margin: 60px auto;
+  }
+  .ASRApp .text-card img {
+    max-width: 43%;
+  }
+}
+
+footer {
+  margin-top: 70px;
+}
+footer .nav-link {
+  padding: 3px 0;
+  font-size: 17px;
+}
+@media (max-width: 767px) {
+  footer .py-5 {
+    padding: 0 !important;
   }
 }/*# sourceMappingURL=main.css.map */

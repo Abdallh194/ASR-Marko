@@ -12,6 +12,8 @@ import Shop from "../pages/Shop";
 import Profile from "../pages/Profile";
 import SearchPage from "../pages/Search";
 import ErrorBoundary from "../components/error/ErrorBoundary";
+import Categories from "../pages/Categories";
+import NotFound from "../components/error/NotFound";
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +25,7 @@ const routes = createBrowserRouter([
         </ErrorBoundary>
       </Suspense>
     ),
+    errorElement: <NotFound />,
     children: [
       { index: true, element: <LandingPage /> },
       { path: "/about", element: <About /> },
@@ -32,6 +35,7 @@ const routes = createBrowserRouter([
       { path: "/shop", element: <Shop /> },
       { path: "/profile", element: <Profile /> },
       { path: "/search", element: <SearchPage /> },
+      { path: "/categories/:prefix", element: <Categories /> },
     ],
   },
 ]);

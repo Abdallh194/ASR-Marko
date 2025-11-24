@@ -1,0 +1,12 @@
+footer {
+  margin-top: 70px;
+  .nav-link {
+    padding: 3px 0;
+    font-size: 17px;
+  }
+  @media (max-width: 767px) {
+    .py-5 {
+      padding: 0 !important;
+    }
+  }
+}

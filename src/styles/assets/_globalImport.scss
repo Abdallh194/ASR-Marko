@@ -15,3 +15,68 @@ body,
 html {
   font-family: $main-font !important;
 }
+
+.center-ver-ali {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 85%;
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+}
+.SectionHr {
+  .title {
+    position: relative;
+    padding-left: 35px;
+    margin-top: 70px;
+    font-size: 19px;
+    color: $main-color;
+    font-weight: 600;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 25px;
+      height: 73px;
+      left: 0;
+      top: -22px;
+      border-radius: 6px;
+      background-color: $main-color;
+    }
+  }
+  .title-desc {
+    margin-top: 37px;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: $header-font;
+    @media (max-width: 992px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.loader {
+  display: block;
+  margin: 40px auto;
+}
+.copy {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: white;
+  font-size: 19px;
+  a {
+    text-decoration: none;
+    color: $main-color;
+    font-weight: bolder;
+  }
+  @media (max-width: 767px) {
+    display: block;
+    font-size: 16px;
+    .name {
+      margin-bottom: 8px;
+    }
+  }
+}

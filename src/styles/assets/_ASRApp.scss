@@ -1,0 +1,72 @@
+.ASRApp {
+  margin-top: 40px;
+  .row {
+    position: relative;
+    z-index: 3;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 75%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      border-radius: 40px;
+      background-color: $light-blue;
+    }
+  }
+  .img-card {
+    display: flex;
+    justify-content: end;
+  }
+  .text-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .img-fluid {
+      margin-right: 20px;
+    }
+  }
+  .header {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: $header-font;
+  }
+  .desc {
+    font-size: 19px;
+    width: 89%;
+    color: #6d6d6d;
+    padding: 20px 0;
+  }
+  @media (max-width: 1400px) {
+    .header {
+      font-size: 22px;
+    }
+    .desc {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 992px) {
+    .img-card {
+      justify-content: center;
+    }
+    .row {
+      &::before {
+        height: 109%;
+      }
+    }
+    .text-card {
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: 585px) {
+    width: 90%;
+    margin: 60px auto;
+    .text-card {
+      img {
+        max-width: 43%;
+      }
+    }
+  }
+}
